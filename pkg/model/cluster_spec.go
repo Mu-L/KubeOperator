@@ -42,7 +42,6 @@ type ClusterSpec struct {
 	NetworkInterface         string `json:"networkInterface"`
 	NetworkCidr              string `json:"networkCidr"`
 	SupportGpu               string `json:"supportGpu"`
-	YumOperate               string `json:"yumOperate"`
 	KubeNetworkNodePrefix    int    `json:"kubeNetworkNodePrefix"`
 }
 

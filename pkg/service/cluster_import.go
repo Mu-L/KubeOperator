@@ -110,7 +110,6 @@ func (c clusterImportService) Import(clusterImport dto.ClusterImport) error {
 			NetworkInterface:         clusterImport.KoClusterInfo.NetworkInterface,
 			NetworkCidr:              clusterImport.KoClusterInfo.NetworkCidr,
 			SupportGpu:               clusterImport.KoClusterInfo.SupportGpu,
-			YumOperate:               clusterImport.KoClusterInfo.YumOperate,
 
 			LbMode:            constant.ClusterSourceInternal,
 			LbKubeApiserverIp: address,
