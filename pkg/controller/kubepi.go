@@ -66,7 +66,9 @@ func (p KubePiController) PostCheckConn() error {
 }
 
 func (p KubePiController) GetJumpBy(name string) (*dto.Dashboard, error) {
-	ss, err := p.KubePiService.LoadInfo(name)
+	user := p.Ctx.Values().Get("user")
+	roleStr, _ := user.(dto.SessionUser)
+	ss, err := p.KubePiService.LoadInfo(name, roleStr.IsAdmin)
 	if err != nil {
 		return nil, err
 	}
